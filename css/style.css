@@ -86,6 +86,10 @@
   .timeline .timeline-badge {
     left: 12px;
   }
+
+  nav .brand-logo{
+    font-size: 1.6rem;
+  }
 }
 .card-title {
   line-height: 1em;
