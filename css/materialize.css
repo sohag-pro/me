@@ -5086,7 +5086,7 @@ small {
 }
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {
-  background-color: rgba(246, 178, 181, 0.2);
+  background-color: #e8e8e8;
   outline: none;
 }
 
@@ -5105,7 +5105,7 @@ small {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #f6b2b5;
+  background-color: #000;
   will-change: left, right;
 }
 
