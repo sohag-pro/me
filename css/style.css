@@ -110,8 +110,9 @@
 
 .ml10 {
   position: relative;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 2em;
+  margin: 0px;
 }
 
 .ml10 .text-wrapper {
