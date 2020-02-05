@@ -19,13 +19,21 @@ var mybutton = document.getElementById("back");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
-
+var one = 1;
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
   }
+
+  
+  if(document.documentElement.scrollTop > 590 && one === 1){
+    one = one + 1;
+    console.log('trigrred', one);
+    //TODO: add class here
+  }
+  console.log(document.documentElement.scrollTop);
 }
 
 // When the user clicks on the button, scroll to the top of the document
