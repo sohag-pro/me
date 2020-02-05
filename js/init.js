@@ -19,7 +19,10 @@ var mybutton = document.getElementById("back");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
-var one = 1;
+var intro = 1;
+var projects = 1;
+var employment = 1;
+var skill = 1;
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -28,12 +31,37 @@ function scrollFunction() {
   }
 
   
-  if(document.documentElement.scrollTop > 590 && one === 1){
-    one = one + 1;
-    console.log('trigrred', one);
-    //TODO: add class here
+  if(document.documentElement.scrollTop > 100 && intro === 1){
+    intro++;
+    animateCSS('#intro', 'fadeInLeft');
+  }
+  if(document.documentElement.scrollTop > 600 && projects === 1){
+    projects++;
+    animateCSS('#projects', 'fadeInRight');
+  }
+  if(document.documentElement.scrollTop > 1100 && employment === 1){
+    employment++;
+    animateCSS('#employment', 'fadeInLeft');
+  }
+  if(document.documentElement.scrollTop > 1600 && skill === 1){
+    skill++;
+    animateCSS('#skill', 'fadeInRight');
   }
   console.log(document.documentElement.scrollTop);
+}
+
+function animateCSS(element, animationName, callback) {
+  const node = document.querySelector(element)
+  node.classList.add('animated', animationName)
+
+  function handleAnimationEnd() {
+      node.classList.remove('animated', animationName)
+      node.removeEventListener('animationend', handleAnimationEnd)
+
+      if (typeof callback === 'function') callback()
+  }
+
+  node.addEventListener('animationend', handleAnimationEnd)
 }
 
 // When the user clicks on the button, scroll to the top of the document
