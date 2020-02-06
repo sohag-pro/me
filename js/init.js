@@ -31,27 +31,28 @@ function scrollFunction() {
   }
 
   
-  if(document.documentElement.scrollTop > 100 && intro === 1){
-    intro++;
-    animateCSS('#intro', 'fadeInLeft');
-  }
-  if(document.documentElement.scrollTop > 600 && projects === 1){
-    projects++;
-    animateCSS('#projects', 'fadeInRight');
-  }
-  if(document.documentElement.scrollTop > 1100 && employment === 1){
-    employment++;
-    animateCSS('#employment', 'fadeInLeft');
-  }
-  if(document.documentElement.scrollTop > 1600 && skill === 1){
-    skill++;
-    animateCSS('#skill', 'fadeInRight');
-  }
-  console.log(document.documentElement.scrollTop);
+  // if(document.documentElement.scrollTop > 100 && intro === 1){
+  //   intro++;
+  //   animateCSS('#intro', 'fadeInLeft');
+  // }
+  // if(document.documentElement.scrollTop > 500 && projects === 1){
+  //   projects++;
+  //   animateCSS('#projects', 'fadeInRight');
+  // }
+  // if(document.documentElement.scrollTop > 800 && employment === 1){
+  //   employment++;
+  //   animateCSS('#employment', 'fadeInLeft');
+  // }
+  // if(document.documentElement.scrollTop > 1200 && skill === 1){
+  //   skill++;
+  //   animateCSS('#skill', 'fadeInRight');
+  // }
+  // console.log(document.documentElement.scrollTop);
 }
 
 function animateCSS(element, animationName, callback) {
   const node = document.querySelector(element)
+  $(element).show();
   node.classList.add('animated', animationName)
 
   function handleAnimationEnd() {
